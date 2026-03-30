@@ -3,20 +3,69 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>GlassBook Support</title>
-    <meta name="description" content="GlassBook support information and common questions." />
+    <title>Nightframe Support</title>
+    <meta
+      name="description"
+      content="Nightframe support information, common questions, and contact details."
+    />
     <link rel="stylesheet" href="../assets/styles.css" />
+    <style>
+      :root {
+        --bg: #f3f6fb;
+        --bg-2: #e7eef8;
+        --card: rgba(255, 255, 255, 0.72);
+        --card-strong: rgba(255, 255, 255, 0.9);
+        --text: #132238;
+        --muted: #5d6d80;
+        --accent: #6f8fe8;
+        --accent-2: #d7b86b;
+        --line: rgba(19, 34, 56, 0.1);
+        --shadow: 0 22px 60px rgba(19, 34, 56, 0.1);
+        --max: 980px;
+      }
+      body {
+        background:
+          radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.9), transparent 30%),
+          radial-gradient(circle at 75% 12%, rgba(158, 185, 255, 0.18), transparent 24%),
+          radial-gradient(circle at 84% 28%, rgba(215, 184, 107, 0.16), transparent 22%),
+          linear-gradient(180deg, var(--bg), var(--bg-2));
+      }
+      .hero::before {
+        background: radial-gradient(circle, rgba(111, 143, 232, 0.18), transparent 70%);
+      }
+      .hero::after {
+        background: radial-gradient(circle, rgba(215, 184, 107, 0.16), transparent 68%);
+      }
+      .eyebrow::before {
+        background: linear-gradient(180deg, #6f8fe8, #97aef7);
+        box-shadow: 0 0 0 6px rgba(111, 143, 232, 0.1);
+      }
+      .button.primary {
+        background: linear-gradient(180deg, #6f8fe8, #5e7cd9);
+        box-shadow: 0 14px 28px rgba(111, 143, 232, 0.22);
+      }
+      .brand-mark {
+        width: 224px;
+        height: 224px;
+      }
+      .brand-mark img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 12px 18px rgba(19, 34, 56, 0.12));
+      }
+    </style>
   </head>
   <body>
     <main class="shell">
       <section class="hero">
-        <div class="eyebrow">Support / 支持</div>
+        <div class="eyebrow">Support</div>
         <div class="split">
           <div>
-            <h1>GlassBook Support</h1>
+            <h1>Nightframe Support</h1>
             <p class="lede">
-              GlassBook is an on-device pricing tool for stained glass. Use this page for quick
-              help with purchases, backups, exports, and data handling.
+              Nightframe is a direct-paid, local-first astrophotography workflow tool. Use this
+              page for help with backup, export, and data handling.
             </p>
             <div class="hero-actions">
               <a class="button primary" href="../privacy/">Privacy Policy</a>
@@ -24,7 +73,7 @@
             </div>
           </div>
           <div class="brand-mark" aria-hidden="true">
-            <img src="../assets/brand-icon.svg" alt="" />
+            <img src="../assets/nightframe-mark.svg" alt="" />
           </div>
         </div>
       </section>
@@ -34,65 +83,57 @@
           <div class="section-title">Quick answers</div>
           <div class="list">
             <div class="item">
-              <strong>How do I restore Pro?</strong>
+              <strong>Is there a Restore Purchases button?</strong>
               <div class="muted small">
-                Open Settings and tap Restore Purchases. Make sure you are signed into the same
-                Apple ID used for the original purchase.
+                No. Nightframe is a one-time purchase app and does not use in-app purchases.
               </div>
             </div>
             <div class="item">
-              <strong>Are my projects stored on a server?</strong>
+              <strong>Is my data on a server?</strong>
               <div class="muted small">
-                No. GlassBook is designed to work on device. Your project data stays on your
-                iPhone or iPad unless you export or back it up.
+                No. Sessions, rigs, recipes, issues, capture settings, and calibration records
+                stay on your device unless you export them.
               </div>
             </div>
             <div class="item">
-              <strong>What backup format does GlassBook use?</strong>
+              <strong>How do backup and restore work?</strong>
               <div class="muted small">
-                Backups are `.glassbook` package files that can include projects, photos, and
-                studio assets.
+                Use the in-app export and backup flows. The files remain under your control in
+                Files or any location you choose.
               </div>
             </div>
             <div class="item">
               <strong>Which languages are supported?</strong>
               <div class="muted small">
-                GlassBook follows the system language and supports English and Simplified
-                Chinese.
+                Nightframe follows the system language and supports English, Simplified Chinese,
+                Japanese, Korean, German, Italian, Russian, and French.
               </div>
             </div>
           </div>
         </article>
 
         <article class="card soft">
-          <div class="section-title">Troubleshooting</div>
-          <div class="list">
-            <div class="item">
-              <strong>Pro did not unlock after purchase</strong>
-              <div class="muted small">
-                Reopen the app, wait a moment for StoreKit to refresh, and tap Restore Purchases if
-                needed.
+          <div class="section-title">What to include in a message</div>
+          <div class="stack">
+            <p>
+              If you still need help, send the following so we can reproduce the issue quickly.
+            </p>
+            <div class="list">
+              <div class="item">
+                <strong>Device model</strong>
+                <div class="muted small">Example: iPhone 15 Pro or iPad Pro.</div>
               </div>
-            </div>
-            <div class="item">
-              <strong>Backup import failed</strong>
-              <div class="muted small">
-                Confirm the file is a `.glassbook` package created by GlassBook and not an older
-                unsupported JSON backup.
+              <div class="item">
+                <strong>iOS or iPadOS version</strong>
+                <div class="muted small">Example: iOS 18.4.</div>
               </div>
-            </div>
-            <div class="item">
-              <strong>Photos look missing</strong>
-              <div class="muted small">
-                Imported photos are stored with the backup package or on the device, depending on
-                the export path you choose.
+              <div class="item">
+                <strong>Exact steps</strong>
+                <div class="muted small">Tell us what you tapped and what you expected to happen.</div>
               </div>
-            </div>
-            <div class="item">
-              <strong>App still shows the free limit</strong>
-              <div class="muted small">
-                Check that the purchase was verified by Apple and that the app was relaunched after
-                the entitlement sync finished.
+              <div class="item">
+                <strong>Screenshot</strong>
+                <div class="muted small">A screenshot helps us see the state of the app quickly.</div>
               </div>
             </div>
           </div>
@@ -101,15 +142,14 @@
 
       <section class="section">
         <div class="card">
-          <div class="section-title">Need more help?</div>
+          <div class="section-title">Contact</div>
           <p>
-            If the answer above does not solve the issue, use the support contact shown on the App
-            Store product page and include your device model, iOS version, and a screenshot of the
-            problem.
+            Email <a href="mailto:support@nightframe.app">support@nightframe.app</a> for support
+            or review questions.
           </p>
           <p class="footnote">
-            For privacy reasons, GlassBook does not require an account, and the app does not
-            maintain a server-side user profile.
+            Nightframe does not require an account, does not use a server-side user profile, and
+            does not include a subscription or Restore Purchases flow.
           </p>
         </div>
       </section>
